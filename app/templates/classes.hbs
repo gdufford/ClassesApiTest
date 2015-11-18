@@ -1,0 +1,22 @@
+<h2>Class list</h2>
+<hr/>
+<table border=1>
+<thead><th>Classes</th><th>Class</th></thead>
+<tr>
+	<td>
+		<table border=1>
+		<thead><th>Class Number</th><th>Operating Location</th><th>Action</th></thead>
+		{{#each class in model}}
+			<tr>
+				<td>{{class.classNumber}}</td>
+				<td>{{class.operatingLocation}}</td>
+				<td>{{#link-to 'classes.class' class}}EDIT{{/link-to}}</td>
+			</tr>
+		{{/each}}
+		</table>
+	</td>
+	<td width=550 style="padding: 10px;">
+		{{outlet}}
+	</td>
+</tr>
+</table>

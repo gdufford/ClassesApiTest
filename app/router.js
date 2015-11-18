@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('classes', function() {
+      this.route('class',{path: '/:class_id'}, function(){})
+  });
 });
 
 export default Router;
